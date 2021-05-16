@@ -1,11 +1,10 @@
 package org.fasttrackit.features;
 
-import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.annotations.TestsRequirement;
 import org.fasttrackit.steps.ProductSteps;
 import org.fasttrackit.steps.ResultSteps;
 import org.fasttrackit.steps.SearchSteps;
+import org.fasttrackit.utils.Constants;
 import org.junit.Test;
 
 public class ProductTest extends BaseTest {
@@ -21,7 +20,7 @@ public class ProductTest extends BaseTest {
 
     @Test
     public void addProductToCart() {
-        searchSteps.doSearch("KHAKI BOWERY CHINO PANTS");
+        searchSteps.doSearch(Constants.PRODUCT_NAME);
         resultSteps.clickOnViewDetailsOfTheFirstProductButton();
         productSteps.clickOnProductCharacteristicsButtons();
         productSteps.clickOnAddToCartButton();

@@ -1,8 +1,6 @@
 package org.fasttrackit.features;
 
 import net.thucydides.core.annotations.Steps;
-import org.fasttrackit.pages.ProductPage;
-import org.fasttrackit.pages.ResultPage;
 import org.fasttrackit.steps.ProductSteps;
 import org.fasttrackit.steps.ResultSteps;
 import org.fasttrackit.steps.SearchSteps;

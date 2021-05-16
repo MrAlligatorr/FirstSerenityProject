@@ -1,8 +1,6 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.Steps;
-import org.fasttrackit.features.ResultTest;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.ProductPage;
 import org.junit.Assert;
