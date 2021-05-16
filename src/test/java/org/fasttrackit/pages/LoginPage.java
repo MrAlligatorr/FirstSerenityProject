@@ -17,7 +17,14 @@ public class LoginPage extends PageObject {
     private WebElementFacade loginButton;
 
     @FindBy(css = ".error-msg span")
-    private WebElementFacade erroMessageSpan;
+    private WebElementFacade errorMessageSpan;
+
+    @FindBy(id = "advice-required-entry-email")
+    private WebElementFacade errorMessageEmail;
+
+    @FindBy(id = "advice-required-entry-pass")
+    private WebElementFacade errorMessagePassword;
+
 
     public void setEmailField(String email){
         typeInto(emailField, email);
@@ -32,7 +39,11 @@ public class LoginPage extends PageObject {
     }
 
     public void checkInvalidCredentialsMessage(){
-        erroMessageSpan.shouldContainOnlyText("Invalid login or password.");
+        errorMessageSpan.shouldContainOnlyText("Invalid login or password.");
     }
 
+    public void checkEmptyMandatoryFieldsErrorMessage(){
+        errorMessageEmail.shouldContainOnlyText("This is a required field.");
+        errorMessagePassword.shouldContainOnlyText("This is a required field.");
+    }
 }

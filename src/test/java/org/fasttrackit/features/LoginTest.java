@@ -1,7 +1,5 @@
 package org.fasttrackit.features;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.steps.LoginSteps;
 import org.fasttrackit.utils.Constants;
@@ -28,5 +26,10 @@ public class LoginTest extends BaseTest{
         loginSteps.checkNotLoggedIn();
     }
 
-
+    @Test
+    public void loginWithEmptyMandatoryFields(){
+        loginSteps.navigateToLogin();
+        loginSteps.clickLogIn();
+        loginSteps.checkEmptyMandatoryFieldsErrorMessage();
+    }
 }

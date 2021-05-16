@@ -8,11 +8,12 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
 public class BaseTest {
+
     @Managed(uniqueSession = true)
     private WebDriver driver;
 
     @Before
-    public void maximize(){
+    public void maximize() {
         driver.manage().window().maximize();
     }
 }

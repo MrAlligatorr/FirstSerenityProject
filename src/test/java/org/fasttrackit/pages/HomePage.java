@@ -14,13 +14,37 @@ public class HomePage extends PageObject {
     @FindBy(css = "[title='Log In']")
     private WebElementFacade logInLink;
 
-    public void clickAccountLink(){
+    @FindBy(css = "[title = 'Register']")
+    private WebElementFacade registerLink;
+
+    @FindBy(id = "search")
+    private WebElementFacade searchBarField;
+
+    @FindBy(css = ".search-button")
+    private WebElementFacade searchBarButton;
+
+
+    public void clickAccountLink() {
         clickOn(accountLink);
     }
 
-    public void clickLogInLink(){
+    public void clickLogInLink() {
         clickOn(logInLink);
     }
 
+    public void clickRegisterLink() {
+        clickOn(registerLink);
+    }
 
+    public void clickOnSearchBar(){
+        clickOn(searchBarField);
+    }
+
+    public void setSearchBarField(String text) {
+        typeInto(searchBarField, text);
+    }
+
+    public void clickSearchBarButton(){
+        clickOn(searchBarButton);
+    }
 }

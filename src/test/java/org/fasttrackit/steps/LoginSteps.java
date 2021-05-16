@@ -48,4 +48,9 @@ public class LoginSteps {
     public void checkNotLoggedIn(){
         loginPage.checkInvalidCredentialsMessage();
     }
+
+    @Step
+    public void checkEmptyMandatoryFieldsErrorMessage(){
+        loginPage.checkEmptyMandatoryFieldsErrorMessage();
+    }
 }
